@@ -1,7 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [cars, setCars] = useState([])
+
+  useEffect(()=>{
+    fetch("http://localhost:3000/cars")
+    .then(res => res.json())
+    .then(data => console.log(data))
+  },[])
+
+  //console.log(cars)
+  
   return (
     <div className="App">
       <header className="App-header">
