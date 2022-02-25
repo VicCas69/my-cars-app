@@ -1,13 +1,134 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Playfair Display", serif;
+  background-color: rgb(180, 223, 240);
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.25rem 1rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  background-color: rgb(82, 143, 221);
+  
+}
+
+button.primary {
+  background-color: var(--green);
+  color: white;
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+.new-car-form {
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  background-color: rgba(11, 136, 11, 0.5);
+}
+
+.new-car-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+
+}
+
+.new-car-form input {
+  margin-right: 1rem;
+  flex: 2;
+}
+
+.new-car-form button {
+  width: 150px;
+  border: 1in;
+}
+
+.searchbar {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input {
+  padding: 0.25rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2em;
+  border-bottom: 2px solid gray;
+  transition: all 0.2s;
+  width: 20%;  
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--green);
+}
+
+.cards {
+  list-style: none;
+}
+
+.card {
+  margin: 1rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card button {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(33% - 2rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: calc(25% - 2rem);
+  }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: calc(20% - 2rem);
+  }
 }
