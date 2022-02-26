@@ -6,6 +6,7 @@ function Founders({cars}){
             {cars.map((car)=> {
                 return <div style={{margin: "2rem"}}>
                     <img src={car.founderImg} width="350px" height="350px" style={{border: "solid"}}/>
+                    <h3>"{car.brand}"</h3>
                     <h2 align="center">{car.founder}</h2>
                     </div>
             })}

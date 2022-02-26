@@ -49,39 +49,39 @@ function NewCarForm({handleSubmit, handleNewCar}){
                 type="text" 
                 name="brand"                  
                 value={formData.brand} 
-                onChange={handleChange}/>
+                onChange={handleChange} required/>
                 <label>Model</label>
                 <input 
                 type="text" 
                 name="model" 
                 value={formData.model} 
-                onChange={handleChange}/>
+                onChange={handleChange} required/>
                 <label>Image</label>
                 <input 
                 type="text" 
                 name="img"                  
                 value={formData.img} 
-                onChange={handleChange}/>
+                onChange={handleChange} required/>
                 <label>Year</label>
                 <input 
                 type="number" 
                 name="year"   
                 value={formData.year} 
-                onChange={handleChange} 
+                onChange={handleChange} required
                 />
                 <label>Founder</label>
                 <input 
                 type="text" 
                 name="founder"                  
                 value={formData.founder} 
-                onChange={handleChange}
+                onChange={handleChange} required
                 />
                 <label>Founder Image</label>
                 <input 
                 type="text" 
                 name="founderImg"                  
                 value={formData.founderImg} 
-                onChange={handleChange}
+                onChange={handleChange} required
                 /><p></p>
                 <button type="submit">Add Car</button>
             </form>
