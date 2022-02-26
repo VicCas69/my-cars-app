@@ -10,8 +10,10 @@ import Founders from './Founders';
 function App() {
 
   const [cars, setCars] = useState([]);
-  const [search, setSearch] = useState("");
-  //const [dropDown, setDropDown] = useState("");
+
+  function handleNewCar(car){
+    setCars([...cars, car])
+  }
 
   useEffect(()=>{
     fetch("http://localhost:3000/cars")
@@ -19,18 +21,14 @@ function App() {
     .then(data => setCars(data))
   }, [])
 
+  
+  const [search, setSearch] = useState("");
+
   function handleSearch(e){
     setSearch(e.target.value)
   }
 
-  /*function handleChange(e){
-    setDropDown(e.target.value)
-    //console.log(e.target.value)
-  }*/
-
-  function handleNewCar(car){
-    setCars([...cars, car])
-  }
+  
 
   return (
     <div className='app'>

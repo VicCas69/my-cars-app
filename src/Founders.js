@@ -1,6 +1,6 @@
 import React from "react";
 
-function Founders({cars}){
+function Founders({ cars }){
     return (
         <div className="cards" align="center">
             {cars.map((car)=> {
